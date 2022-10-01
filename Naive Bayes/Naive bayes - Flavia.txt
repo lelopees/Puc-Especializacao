@@ -1,0 +1,10 @@
+é rapido e uma boa acuracia, por ser classifcador linear, ele exige que os dados possam ser separados por linhas retas quando estes dados em um grafico cartesiano. Se os dados foram não lineares poe não alcançar uma boa classificação nos dados.
+
+P(x) é a distribuição dos dados de entrada (por exemplo, quais emails são mais prováveis)
+P(y|y) é a distrbuição condicional da saída, dada a entrada (por exemplo, se é provável ou não um deterinado email x ser spam)
+
+dado cenário de detectar se um email é ou não spam, é usado um dadoset com os emails, e nota que a palavra free apareceu em 265, das quais 199 são spam.
+
+P(y =spam | x = "free" apareceu) = 199/265 = 75%
+
+logo a mensagem qualquer já tem 75% de chance de ser spam

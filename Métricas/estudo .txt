@@ -1,0 +1,37 @@
+Bagging - utiliza a técnica de amostragem bootstrap que cra varios subconjuntos de dados de treinamento., a partir do conjunto de treinamento original
+
+a avaliação de modelos preditivos é essencial para escolher a configuração de parametros de um determinado algortimo. 
+
+TP = verdadeiro positivos
+TN = verdadeiros negativos
+FP = falsos positivos (era falso mas preveu positivo) erro tipo I
+FN = falsos negativos (era verdadeiro mas preveu negativo) erro tipo II
+
+Recall/ Sensibilidade: quantos de casos positivos o modelo realmente acertou
+proporção de acerto quando o modelo prediz que há presença de virus, dado que a amostra é apenas de clientes que estão contaminados pelo virus. tem grande importancia no contexto de identificação de doenças como nesse caso (gravida ou não, contamina ou não)
+
+formula: TP/(TP+FN)
+
+precisão: numeros corretos identificados como positivos do total de itens identificados como positivos
+formula: TP/(TP+FP)
+
+F1: média harmonica de precisão e recall, mede a eficácia da identificação quando tanta importancia é dada à recuperação quanto à precisão
+formula: 2* precisao * recall / precisao + recall
+
+Especificialidade:verdadeiros negativos (quanto de casos negativos o modelos acertou)
+formula: TN/(TN+FP)
+
+Em alguns casos pode ser mais interessante ter uma alta taxa de  acertos positivos, mesmo que o modelo tenha uma alta taxa de falsos positivos (FP)
+
+Acuracia: taxa de acertos (TP + TN) ou erros do modelo (FP + FN)
+Em casos de aplicações médicas isso não tem uma utilidade, pois dado o exemplo que somente 10% das pessoas possui cancer de um dataset, o modelo possuirá 90% de acuraria. Ter cuidado ao analisá-la, pois é possível obter uma acurácia bastante alta, mas que é inutil para o propósito do modelo de predição
+é recomendado usa quando os dados são balanceados, isto é, em que as frequencia das classes são proximas.
+
+A relação entre essas duas métricas é imporante para ser analisado caso a caso, e se torna ainda mais evidente em uma base desbalanceada, onde a variável target tem uma distribuição muito discrepante entre valores positivos e negativos. Uma acurácia alta não significa necessariamente que o modelo é perfeito, pois se no geral ele é bom mas não é bom para prever valores positivos, alguma coisa deve ser repensada na modelagem.
+
+para doenças é importante a precisão: taxa de acertos em relação aos casos positivos
+
+LeaveOneOut = percorre todo o seu conjunto
+
+curva roc = é usada para regressão logistica
+

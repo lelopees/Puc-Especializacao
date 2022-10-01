@@ -1,0 +1,36 @@
+Variável preditora: é uma variável independente, que pode influencias na variável que queremos descobrir. (valor de x)
+variável alvo ou dependente: é a variável que queremos descobrir ou prever. (valor de y).
+
+valores a e b são valores que o algoritmo deve descobrir.
+a =  intercepto
+b = inclinação
+
+OLS (Ordinary Least Squares) - busca o melhor valor que os coeficientes possam ter, para que a diferença entre o valor predito pela função e o valor real sejam os menores.
+
+varia de 1 a -1 (mais proximo do -1 será descrescente, inversamente desporpocional)
+quando mais proximo de 1 mais forte é essa correlação, quando desce uma a outra desce também, quando sobe uma a outra sobe também.
+
+classificação positiva
+classificação negativa
+classificação perfeita positiva
+classificação perfeita negativa
+
+fit = onde os dados serão treinados
+reg.coef_ = para obter os coeficientes
+
+arvores de decisões ( o algoritmo é quem avalia o numero)
+sequencia de escolhas
+
+knn = ele usa impares para não impatar 
+você precisa de tratar os empates (critérios)
+
+
+
+
+
+
+
+
+
+
+

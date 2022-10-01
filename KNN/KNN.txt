@@ -1,0 +1,8 @@
+class sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, *, weights='uniform', algorithm='auto', leaf_size=30, p=2, metric='minkowski', metric_params=None, n_jobs=None)[source]
+
+o hiperparametro weights pode-se utilizar uma função customizada
+no caso de regressão knn é utilizado o valor da média dos vizinhos mais proximos
+
+ele é online, para cada instancia é buscado os valores das distancias
+
+desvantagens é sensível a outliers, isto é, o vizinho mais proximo pode ser o vizinho com um valor extremo

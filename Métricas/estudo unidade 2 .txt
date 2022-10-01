@@ -1,0 +1,39 @@
+Um modelo ruim pode ser um modelo que não consegue predizer valores de forma correta, ou seja, possui baixa acurácia.Ademais, um modelo que consome muitos recursos do computador. Em resumo um bom modelo deve ter balanceamento correto entre uso de recursos e acurácia ou metricas de avali~ções.
+
+Exige experiencia do projetor para asaber quais caracteristicas são mais relevantes para aquele problema, também conhecer sobre o dominio do problema
+
+Redução de dimensionalidade duas categorias: seleção de features que indica a escolha das featuras mais adequadas e extração de features é criado um novo banco de dados com as features extraidas.
+
+Output label = dados que possuem features não dependetes entre si, mas altamente dependentes da target 
+
+correlação quanto maior o valor maior a chance de relação
+p-value quanto menor, maior a confiança de que os dados analisados foram gerados por uma mesma distribuição
+
+PCA tecnica que usa algebra linear para construir retas no planos dos dados de forma que os dados de diferentes classes fiquem separados
+é indicado quando não se sabe quais features deseja-se exluir, indicando o não conhecimento da base de dados
+é um metodo linear, limitando sua atuação em dados não lineares. Busca por uma projeção linear a partir dos dados originais em um outro plano com uma dimensionalidade menor, exemplo: em um dataset de vinhos, no qual possui 4 features (teor alcoolico, coloração do vinho, acidez e tipo da uva) pode-se reduzir as dimensões, armazenando teor alcoolico e coloração do vinho em um unico valor. 
+é necessário realizar a transformação das features e depois usar o pca
+https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60
+https://towardsdatascience.com/understanding-pca-fae3e243731d
+
+usa um numero menor de variaveis não correlacionadas conhecidas como componentes principais de um conjunto maior de dados.
+ Usa através de autovalores e autovetores de matriz, esses autovetores da matriz tem a propriedade de aapontar ao longo as principais direções.
+
+****é importante que as variaveis sejam numericas e tenham os dados padronizados
+
+junta as variaveis e não exclui, buscando a maior variebilidade dos dados, por meio de calculo de variancia
+
+um componente principal é uma combinação linear das variaveis originais
+
+LDA usada para quando se conhece mais os dados , similar ao PCA, porem permite analise mais correta em dados não lineares
+não precisa ser feito a transformação pois isso é feito diretamente pela função que invoca o LDA
+Quanto mais proximo de 1 a variancia ser, melhor é a redução de dimensionalidade, indicando que houve pouca perda 
+
+t-SNE técnica que usa estatistica para comparar as distribuições dos dados e inferir se são da mesma classe ou não, permitindo separar os dados de forma mais clara.
+procura um balanceamento onde as duas distribuições apresentem a maior similaridade. Essa ténica possui limitações na quantidade maxima de dimensões, sendo recomendadas até 50 dimensões, caso seja maior aplicada PCA para reduzir a um numero menor que 50 antes de usar t-sne.
+A métrica divergencia KL representa o erro, que pode haver na transformação dos dados, quanto menor o valor, melhor o modelo.
+
+tanto PCA e LDA utilizam métodos matemáticos já o t-sne é um método estatisticos.
+
+
+Maldição da dimensionalidade: são efeitos negativos causados pela qantidade de variaveis, as vezes possuimos muitas variaveis correlacionadas,que não apresentam informação útil ao problema

@@ -1,0 +1,47 @@
+As métricas de avaliação explicam o desempenho de um modelo, e um aspecto importante dessas métricas de avaliação é sua capacidade de discriminar entre os resultados do modelo.
+A escolha da métrica depende completamente do tipo de modelo e do seu plano de implementação.
+
+Imagine que você tenha um teste de detecção de anomalias de algum tipo.
+Talvez seja um exame médico que verifica a presença ou ausência de uma doença, talvez seja um algoritmo de aprendizado de máquina baseado em classificação. De qualquer maneira, há duas verdades possíveis na vida real: ou a coisa testada é verdadeira ou é falsa. A pessoa está doente ou não
+
+Matriz de confusão - mapear os resultados
+
+Erros
+verdadeiro:  erro tipo 1 (alfa)
+falso: erro tipo 2 (beta)
+
+recall = taxa de positivo verdadeiro (sensabilidade)
+
+HOLDOUT = dividi o conjunto de dados, treinamento e teste
+K-FOLD CROSS-VALIDATION = dobras são usadas para treinamento, eo restante é usado para teste.
+é um procedimento usado para estimar o desempenho de um algoritmo de aprendizado de máquina ao fazer previsões sobre dados não usados ​​durante o treinamento do modelo.
+A vantagem é que todos os dados são usados para teste
+Normalmente o valor do k é 10
+Imagine que temos uma amostra de dados com 6 observações: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]
+
+A primeira etapa é escolher um valor para k a fim de determinar o número de dobras usadas para dividir os dados. Aqui, usaremos um valor de k = 3. Isso significa que embaralharemos os dados e, em seguida, dividiremos os dados em 3 grupos. Como temos 6 observações, cada grupo terá um número igual de 2 observações.
+
+dados = array([0.1,0.2,0.3,0.4,0.5,0.6])
+kfold = KFold(3, True, 1)
+for treino, teste in kfold.split(dados):
+    print('Treino: %s, teste: %s ' % (dados[treino], dados[teste])) 
+
+Treino: [0.1 0.4 0.5 0.6], teste: [0.2 0.3] 
+Treino: [0.2 0.3 0.4 0.6], teste: [0.1 0.5] 
+Treino: [0.1 0.2 0.3 0.5], teste: [0.4 0.6] 
+
+LOOCV - não deve ser usado em conjuntos de dados muitos grandes 
+é uma validação extrema da validação KFold que tem o custo computacional maximo. Requer que um modelo seja criado e avaliado para cada exemplo no conjunto de dados de treinamento.
+cada linha de dados tem a oportunidade de representar a totalidade do conjunto de dados de teste.
+
+https://machinelearningmastery.com/loocv-for-evaluating-machine-learning-algorithms/
+
+SUBSAMPLING -vários conjuntos de dados são escolhidos aleatoriamente do conjunto de dados e combinados para formar um conjunto de dados de teste.
+
+BOOTSTRAPPING - o conjunto de dados de treinamento será selecionado aleatoriamente, havendo substituição. Os valores que não foram selecionados para serem treinados serão usados para o teste
+
+
+
+
+
+

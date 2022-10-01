@@ -1,0 +1,13 @@
+é um modelo supervisionado - tem alta precisão e velocidade em grandes conjuntos de dados, custo computacional muito baixo, eficiente em um grande conjunto de dados
+é baseado em probabilidade (teorema de bayes) (a probabilidade de um evento ocorrer baseado em outro)
+exemplos de filtros de spam, analise de sentimentos (satisfação de clientes), analise de perfil (bom pagador, mal pagador)
+probabilidade condicional: 
+a probabilidade de um evento A dada a ocorrencia de um evento b
+exemplo se um solicitante de emprestimo é desejável ou não, dependendo de sua renda, histórico de emprestimos e transações anteriores, idade e localização
+- precisa de dados históricos antigos.
+é usado especialmente para classificação. Naive significa = ingenuo (independencia condicional de classe, correlacionadas entre si)	
+
+Classificação Multinomial, por exemplo se voce deseja classificar um artigo de noticias sobre tec, entretenimento, política ou esportes 
+
+Bernoulli Naive Bayes
+semelhante aos bayes multinominais, mas os preditores são variaveis booleanas. ex: se a palavra ocorre no texto sim ou não

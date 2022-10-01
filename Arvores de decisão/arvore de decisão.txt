@@ -1,0 +1,27 @@
+
+Quanto maior o banco de dados, maior a chance do banco acertar na predição
+
+conforme as perguntas respondidas é feito um novo direcionamento
+
+permite a visualização dos dados em forma de árvore, além disso, é uma estrutura que é reordenada a cada vez que um novo dado surge, remontando a árvore para representar os dados no atual momento.
+3 principais: os nós, as arestas e as folhas.
+nos = contém o valor de um determinado atributo
+arestas =  compostas pelo resultado de um determinado nó
+folhas = são os nós terminais da árvore que possuem o valor de saida. ( a decisão / saida )
+
+exemplo: 100 arvore com 3 tipos de resultados ( alto, médio e baixo) sendo 30 baixo risco, 20 médio e 50 alto risco. O modelo irá dizer que a amostra indica ALTO risco de contaminação. Em casos de regressão é feita a media dos valores pelas arvores
+
+**** É o algortimo quem determina os nós (nó raiz, sub nó de decisão, no terminal)
+
+em casos de arvores de regressão:
+exemplo: o nó raiz é peso (valor continuo) muitas possibilidades.... o algoritmo faz a quebra dos pesos (maior que 55 vai para o nó x e menor que 55 vai para nó y)
+
+interpretabilidade:
+
+Random forest = pode ser usado em regressão ou classificação, pode trabalhar com falta de valores, reduz o overfitting, trabalha com grande dados.
+aprendizado baseado em Ensembles
+cada arvore ira produzir sua decisão, a decisão final é alcançada por votação ou por média.
+
+
+
+
