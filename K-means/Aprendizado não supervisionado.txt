@@ -1,0 +1,45 @@
+K-means
+A partir das medidas de cintura e perna de alguns milhares de pessoas, é possivel criar grupos e saber quais pessoas possuem medidas em comum. além disso, pode-se criar grupos representativos para cada tipo de pessoa.
+
+A clusterização permite a identificação de subgrupos, chamados de clusters. A clusterização não exige que os dados tenham informações com rótulos. Cada cluster é identificado a partir de similaridades entre os valores das características dos dados.
+A partir da análise, é possível descobrir relações valiosas entre as características e os dados.
+Outra característica é a redução do espaço de características para selecionar as mais relevantes e remover ruídos nos dados. alguns conjuntos de dados possuem caracteristas com milhoes de valores, mas nem todos são relevantes
+
+outros algoritmos de aprendizado não supervisionado:
+Affinity Propagation (AP) e MeanShift
+
+Affinity Propagation (AP) - é utilizado um geral de todos os dados, ideal para quando você utiliza muitos registros (pontos traçados no mesmo lugar) e deseja ter uma analise geral dos dados. (maior desempenho em questão de tempo rodado comparado com o metodo de Kmeans)
+
+O  k representa o número de grupos que o algoritmo procurará. Seu principal objetivo é criar rotulos.
+
+Após a escolha e calculo do centroides deve ser reposicionados para refinar a classificação. é realizada a média entre todos os pontos de cadas cluster e o centroide, isso se repete até que a distancia entre os valhoes e os novos centroides seja zero.
+
+
+DIFERENÇA ENTRE K-MEANS E DBSCAN: 
+DBSCAM não assume que os clusters possuem formato circular; há a remoção de pontos muito distantes, chamados de noise pontis, ou ruido.
+No exemplo se o numero mininmo de elementros para clsuteeer ser formado fosse 4, somente o cluster cinza permaneceria, e todos os outros seriam parte ou marcados como ruído.
+
+_______________
+
+Um dos grandes problemas é encontrar o numéro de cluster, utilizando um numéro correto de cluster é capaz de determinar um bom rsultado do modelo.
+Existem algumas técnicas para alcançar o número de cluster correto e assertivo para seu modelo.
+
+Basicamente é indicado selecionar o ponto onde o erro deixa de cair bruscamente
+Elbow Method. No método 
+
+Pode ser utilizado o método Elbow Method para indicação de números clusters para o conjunto de dados. Esse método consiste em traçar um gráfico em forma de cotovelo. O que acontece geralmente é que, à medida que aumentamos as quantidades de clusters, as diferenças entre os clusters diminuiem, enquanto as diferenças entre as amostras aumentam, o Elbow Method busca encontrar um ponto de equibilrio nessas amostras.
+
+Existem técnicas específicas para identificação de número ótimo de clusters:
+
+ - WSS (soma de quadrados entre clusters);
+
+ - coeficiente de silhueta (cálculo das distâncias de cada ponto em relação à todos os outros pontos da amostra); 
+
+ - GAP (calculo das dispersões dentro de cada cluster)
+
+
+A escolha do número de clusters deve ser feita de maneira cuidadosa, pois a escolha de um valor baixo de clusters pode fazer com que dados diferentes pertençam a um mesmo cluster, já um valor muito alto de clusters pode fazer com que  dados muito próximos fiquem em clusters diferentes, além de aumentar o tempo de treinamento do modelo.
+
+Quando se trata de dados em duas dimensões, pode-se fazer uma gráfico com esses dados e observar existe um comportamento similar no posicionamento dos valores, isso pode ajudar a encontrar um valor factível para o número de clusters.
+
+Mas a maneira ideal, é treinar o modelo com diferentes valores e então plotar um gráfico com a acurácia do modelo versus a quantidade de clusters utilizados, esse método é conhecido como "elbow method", pois o gráfico formado possui o formato de um cotovelo. Dessa forma, a melhor quantidade de clusters será a quantidade que apresentar o melhor balanço entre número de clusters e acurácia do modelo.
