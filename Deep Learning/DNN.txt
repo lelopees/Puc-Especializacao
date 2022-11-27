@@ -1,0 +1,31 @@
+parâmetros (pesos) > função de perda/custo > métrica > otimizador
+
+o deep learning aprende com as atualizações dos pesos
+
+achar os valores corretos de pesos, as camadas precisam estar com os pesos corretos.
+
+função de perda: 
+loss function = (é dado esse nome para cada exemplo de treinamento, de cada atributo)
+cross function = é a soma do cross...quando é juntado todos os custos dos coeficientes de todos os atributos
+
+estrategia de parada.. pode ser feita de 2 maneiras... 
+1 - ir acompanhando e ver a melhoria de cada passada. (pois está melhorando a cada passada)
+2 - 
+
+gradient descent = que direção será a atualização dos pesos. ex: o peso era 1 agora será menor que 1 ou maior que 1? e também qual a intensidade 
+oferece a direção e a intensidade (nivel de mudança)
+ele ira apresentar um valor e a direção para caminhar na curva
+___________________________________________________________________________________
+
+CNN
+
+Os metodos de otimizador é aconselhável utilizar o adam, e função de ativação (activation = 'relu'),
+na ultima camada, a quantidade de neuronio é a quantidade de classificação
+
+batch_size =128 (não é passado uma imagem por vez, por isso é feito por lote, lotes de 128 imagens, isso acaba sendo mais rapido
+
+função de ativação= são usadas a fim de buscar o aprendizado e a aproximação de qualquer tipo de relacionamento contínuo e compleo entre as variaveis de uma rede
+
+
+
+

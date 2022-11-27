@@ -1,0 +1,131 @@
+Para usar MLPs com imagens, precisamos achatar a imagem. Se fizermos isso, as informações espaciais (relações entre os pixels próximos) serão perdidas. 
+Portanto, a precisão será reduzida significativamente. As CNNs podem reter informações espaciais à medida que capturam as imagens no formato original.
+As CNNs podem reduzir significativamente o número de parâmetros na rede. Então, CNNs são parâmetros eficientes.
+
+Existe apenas um canal de cor em uma imagem em tons de cinza. Assim, uma imagem em tons de cinza é representada como (height, width, 1)ou 
+simplesmente (height, width). Podemos ignorar a terceira dimensão porque ela é uma. Portanto, uma imagem em tons de cinza geralmente é representada como uma matriz 2D (tensor).
+Existem três canais de cor ( Vermelho , Verde e Azul ) em uma imagem RGB. Assim, uma imagem RGB é representada como .
+ A terceira dimensão denota o número de canais de cores na imagem. Uma imagem RGB é representada como uma matriz 3D (tensor).(height, width, 3)
+Quando a imagem for RGB, o filtro deverá ter 3 canais. Isso ocorre porque uma imagem RGB possui 3 canais de cores e filtros de 3 canais são necessários para fazer os cálculos.
+
+
+podemos imaginar uma CNN como um grafo computacional massivo. Digamos que temos uma porta f nesse gráfico computacional com entradas x e y que produz z.
+
+As redes neurais aprendem por meio do ajuste iterativo de parâmetros (pesos e vieses) durante o estágio de treinamento.
+No início, os parâmetros são inicializados por pesos gerados aleatoriamente e os bias são definidos como zero. 
+Isso é seguido por uma passagem direta dos dados pela rede para obter a saída do modelo. Por último, a retropropagação é conduzida. 
+O processo de treinamento do modelo normalmente envolve várias iterações de uma passagem direta, retropropagação e atualização de parâmetros.
+
+
+Entenda: uma passagem direta permite que as informações fluam em uma direção — da entrada para a camada de saída, 
+enquanto a propagação reversa faz o inverso — permitindo que os dados fluam da saída para trás enquanto atualizam os parâmetros (pesos e vieses).
+
+Definição: Back-propagation é um método de aprendizado supervisionado usado por NN para atualizar parâmetros para tornar as previsões da rede mais precisas.
+O processo de otimização de parâmetros é obtido usando um algoritmo de otimização chamado gradiente descendente (esse conceito ficará muito claro à medida que você for lendo).
+
+
+gradiente descendente  = 
+
+
+Existem quatro tipos principais de operações em uma CNN: operação de convolução, operação de agrupamento, operação de nivelamento e operação de classificação ( ou outra relevante) .
+
+Uma rede neural convolucional (CNN) é uma arquitetura de rede para aprendizado profundo que aprende diretamente dos dados. CNNs são particularmente úteis para encontrar padrões em
+ imagens para reconhecer objetos. Eles também podem ser bastante eficazes para classificar dados que não sejam de imagem, como áudio, séries temporais e dados de sinal.
+ 
+ Kernel ou filtro ou detectores de recursos
+Em uma rede neural convolucional, o kernel nada mais é do que um filtro que é usado para extrair as características das imagens.
+O kernel é o filtro de redes neurais que se move pela imagem, escaneando cada pixel e convertendo os dados em um formato menor ou, às vezes, maior.
+
+
+O preenchimento com zeros tem duas vantagens em comparação com o dimensionamento. 
+A primeira vantagem é que, enquanto o dimensionamento traz o risco de deformar os padrões na imagem, o preenchimento não. 
+A segunda vantagem do preenchimento com zeros é que ele acelera os cálculos, em comparação com o dimensionamento, resultando em melhor eficiência computacional
+
+i -> Tamanho da entrada, K-> Tamanho do kernel
+
+Stride é um parâmetro do filtro da rede neural que modifica a quantidade de movimento sobre 
+a imagem ou vídeo. tivemos o passo 1, então levará um por um. Se dermos passo 2, ele terá valor pulando os próximos 2 pixels.
+
+i -> Tamanho da entrada, K-> Tamanho do kernel, S-> Stride
+
+
+
+
+i -> Tamanho da entrada , K-> Tamanho do kernel, S-> Stride, p->Padding
+
+
+Camadas usadas para construir CNN
+As redes neurais convolucionais se distinguem de outras redes neurais por seu desempenho superior com entradas de imagem, fala ou sinal de áudio. Eles têm três tipos principais de camadas, que são:
+
+camada convolucional
+Pode haver várias camadas convolucionais em uma CNN, essa camada é a primeira camada usada para extrair os vários recursos das imagens de entrada.
+ Nesta camada, usamos um filtro ou método Kernel para extrair recursos da imagem de entrada.
+ 
+  Kernel ou filtro ou detectores de recursos
+Em uma rede neural convolucional, o kernel nada mais é do que um filtro que é usado para extrair as características das imagens.
+O kernel é o filtro de redes neurais que se move pela imagem, escaneando cada pixel e convertendo os dados em um formato menor ou, às vezes, maior.
+
+é utilizado o mesmo peso para cada pixel da imagem, aqui os pesos são compartilhados
+
+Multiplos kernels = cada kernel terá um conjunto de parametro diferente, a ideia é que cada kernel capture informações distintas.
+Uma observação extra é que as imagem coloridas são tensores, isto é, 
+
+Em seguida, fazemos outro cálculo movendo o filtro na imagem horizontalmente um passo para a direita. O número de passos (pixels) que deslocamos o filtro sobre a imagem de entrada é chamado de Stride
+
+Se usarmos Stride=2, o tamanho será ainda mais reduzido. Se houver várias camadas convolucionais na CNN, o tamanho do mapa de recursos será reduzido ainda mais no final, 
+de modo que não possamos fazer outras operações no mapa de recursos. Para evitar isso, usamos aplicar Padding à imagem de entrada. 
+
+Padding é um termo relevante para redes neurais convolucionais, pois se refere ao número de pixels adicionados a uma 
+imagem quando ela está sendo processada pelo kernel de uma CNN. Por exemplo, se o preenchimento em uma CNN for definido como zero,
+cada valor de pixel adicionado terá o valor zero. Quando usamos o filtro ou o Kernel para digitalizar a imagem, o tamanho da imagem diminui. 
+Temos que evitar isso porque queremos preservar o tamanho original da imagem para extrair alguns recursos de baixo nível. 
+Portanto, adicionaremos alguns pixels extras fora da imagem
+
+
+Camada de agrupamento
+As camadas de agrupamento são o segundo tipo de camada usado em uma CNN. Pode haver várias camadas de agrupamento em uma CNN.
+O principal objetivo dessa camada é diminuir o tamanho do mapa de recursos convolvidos para reduzir os custos computacionais. 
+Isso é realizado diminuindo as conexões entre as camadas e operando independentemente em cada mapa de recursos. 
+Dependendo do método usado, existem vários tipos de operações de pooling. Temos o agrupamento máximo e o agrupamento médio.
+
+Max pooling: Obtenha o valor máximo na área onde o filtro é aplicado.
+Pooling médio: Obtenha a média dos valores na área onde o filtro é aplicado
+
+Agrupamento
+O agrupamento em redes neurais convolucionais é uma técnica para generalizar recursos extraídos por filtros
+ convolucionais e ajudar a rede a reconhecer recursos independentemente de sua localização na imagem.
+ 
+O nivelamento é usado para converter todas as matrizes bidimensionais resultantes de mapas de recursos agrupados em um único vetor linear contínuo longo. 
+A matriz achatada é alimentada como entrada para a camada totalmente conectada para classificar a imagem.
+
+
+
+Camada totalmente conectada (FC)
+A camada Fully Connected (FC) consiste nos pesos e bias junto com os neurônios e é usada para conectar os neurônios entre duas camadas diferentes. 
+Essas camadas geralmente são colocadas antes da camada de saída e formam as últimas camadas de uma arquitetura CNN.
+
+
+
+
+Outra característica típica das CNNs é a camada Dropout. 
+A camada Dropout é uma máscara que anula a contribuição de alguns neurônios para a próxima camada e deixa inalteradas todas as outras.
+
+
+----
+
+
+As primeiras camadas se concentram em padrões menos importantes (como bordas) nos dados da imagem. As camadas finais encontram padrões mais complexos (por exemplo, nariz, olhos em uma imagem facial). A camada final faz a tarefa de classificação.
+
+
+Função de ativação:
+Uma função de ativação decide se um neurônio deve ser ativado ou não. Isso significa que ele decidirá se a entrada do neurônio na rede é importante ou não no processo de previsão. 
+Existem várias funções de ativação comumente usadas, como as funções ReLU, Softmax, tanH e Sigmoid. Cada uma dessas funções tem um uso específico.
+
+Sigmóide — Para uma classificação binária no modelo CNN
+
+tanH - A função tanh é muito semelhante à função sigmóide. A única diferença é que ela é simétrica em torno da origem. A faixa de valores, neste caso, é de -1 a 1.
+
+S oftmax - É usado em regressão logística multinomial e geralmente é usado como a última função de ativação de uma rede neural para normalizar a saída de uma rede para uma distribuição de probabilidade sobre as classes de saída previstas.
+
+ReLU - a principal vantagem de usar a função ReLU sobre outras funções de ativação é que ela não ativa todos os neurônios ao mesmo tempo.
+

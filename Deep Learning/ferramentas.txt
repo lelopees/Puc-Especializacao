@@ -1,0 +1,37 @@
+ambos keras e tensorflow trabalham com fluxo. 
+tensores: 
+
+Keras:
+Keras é uma biblioteca aberta de Deep Learning implementada utilizando TensorFlow para diversas linguagens/plataformas
+Ele é utilizado na criação de redes neurais para resolução de várias tarefas diferentes, como classificação de imagens, detecção de objetos e regressão.
+Facilita a construção e o treinamento de redes neurais e também fornece uma ampla variedade de redes neurais pré-treinadas que podem ser usadas para várias tarefas.
+Ele foi desenvolvido com foco em permitir a experimentação rápida. No entanto, existem algumas limitações. Por exemplo, não é tão eficiente quanto o TensorFlow em termos de uso de memória e velocidade computacional.
+Além disso, o Keras não oferece suporte ao treinamento distribuído, que é necessário para treinar redes neurais muito grandes.
+
+**Se você deseja criar e testar rapidamente uma rede neural com o mínimo de linhas de código, escolha Keras. Com o Keras, você pode construir redes neurais simples ou muito complexas em poucos minutos. 
+Embora o Keras forneça todas as funcionalidades de uso geral para a construção de modelos de aprendizado profundo, ele não fornece tanto quanto o TF. O TensorFlow oferece operações mais avançadas em comparação com o Keras. Isso é muito útil se você estiver fazendo uma pesquisa ou desenvolvendo algum tipo especial de modelo de aprendizado profundo.
+
+Tensorflow:
+O TensorFlow é uma estrutura de aprendizado profundo de código aberto de ponta a ponta desenvolvida pelo Google e lançada em 2015.
+TensorFlow é uma biblioteca de matemática simbólica usada para redes neurais e é mais adequada para programação de fluxo de dados em uma variedade de tarefas. Ele oferece vários níveis de abstração para modelos de construção e treinamento.
+
+bibliotecas e ferramentas que facilitam a criação e implantação de aplicativos de aprendizado de máquina. Além disso, como mencionado anteriormente, o TensorFlow adotou o Keras, o que faz com que a comparação dos dois pareça problemática. No entanto, ainda compararemos as duas estruturas para fins de integridade, especialmente porque os usuários do Keras não precisam necessariamente usar o TensorFlow
+
+
+O TensorFlow é uma plataforma ponta a ponta de código aberto, uma biblioteca para várias tarefas de aprendizado de máquina, enquanto o Keras é uma biblioteca de rede neural de alto nível executada sobre o TensorFlow
+
+Pytorch:
+é uma estrutura de aprendizado profundo relativamente nova baseada no Torch.
+Desenvolvido pelo grupo de pesquisa de IA do Facebook e de código aberto no GitHub em 2017, é usado para aplicativos de processamento de linguagem natural.PyTorch tem uma reputação de simplicidade, facilidade de uso, flexibilidade, uso de memória eficiente e gráficos computacionais dinâmicos. Também parece nativo, tornando a codificação mais gerenciável e aumentando a velocidade de processamento. PyTorch tem uma abordagem mais "pythônica" e é orientado a objetos, enquanto o TensorFlow oferece uma variedade de opções.
+embora seja o menos popular dos três principais frameworks
+O TensorFlow oferece melhor visualização, o que permite aos desenvolvedores depurar melhor e acompanhar o processo de treinamento. O PyTorch, no entanto, fornece apenas uma visualização limitada.
+Na área de paralelismo de dados, o PyTorch obtém desempenho ideal ao contar com suporte nativo para execução assíncrona por meio do Python. No entanto, com o TensorFlow, você deve codificar e otimizar manualmente todas as operações executadas em um dispositivo específico para permitir o treinamento distribuído. Em resumo, você pode replicar tudo do PyTorch no TensorFlow; você só precisa trabalhar mais nisso.
+
+
+lembre-se de que o PyTorch é mais rápido que o Keras e possui melhores recursos de depuração.
+
+Theano
+Código aberto que permite aos programadores definir, avaliar e otimizar expressões matemáticas, incluindo matrizes multidimensionais e expressões com valor de matriz.
+Theano foi desenvolvido pela Universite de Montreal em 2007 e é uma biblioteca fundamental usada para aprendizado profundo em Python
+
+Ele é projetado principalmente para lidar com os tipos de computação necessários para grandes algoritmos de rede neural usados ​​em Deep Learning

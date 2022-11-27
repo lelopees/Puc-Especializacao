@@ -1,0 +1,35 @@
+1 - Coleta de dados
+Saber o que deseja prever. Verificar o conjunto de dados contém dados suficientes para analise. 
+Observar se os dados estão balanceados.
+2 - preparando os dados
+	aqui é realizado algumas etapas de pré-processamento do conjunto de dados, sendo:
+	- limpeza de dados outliers
+	- limpeza de dados que causam vazamento de dados
+	- missing
+	- categoricos para numericos
+	- dimensionalidades
+	- estudo de remoção de recursos correlacionados (dizem a mesma informação)
+	- normalização e padronização
+	
+3 - escolhendo um modelo
+	determinar uma função de perda. Gradient descent
+	realizar ensemble em modelos
+4 - treinamento
+5 - avaliação
+	avaliar o modelo em situações reais, em novos dados. Validação cruzada. Validation coHort (?), encontrar os parametros de ajustes caso necessário.
+	metricas de avaliação: sensabilidade, especificidade, matriz de confusão, F1
+6 - ajuste de parametros	
+7 - previsão
+
+
+Visualização: Gráficos hexbin são geralmente melhores que gráficos de dispersão. (relacionamento entre as variáveis)
+
+Integrar um conjunto de dados que possuem o mesmo valor: Ex: conjunto de dados podem ter um atributo que identifica o paciente. Assim, os objetos dos diferentes conjuntos que possuem o mesmo valor para identificar o paciente são combinação em um unico conjunto.
+apresentar: conexto, problema, solução, descobertas, limitações, especificar os desempenho, mal e bom desempenho.
+
+
+analise preditiva: é a parte de analise de dados uma mineração de dado, que busca os dados históricos para prever probabilidade de um resultado futuro. 
+Contém duas subparte: mineração de dados e probabilidade.
+Duas subáreas> regressão e classificação de padrões.
+
+SMV para dados quem possuem alta dimensionalidade, KNN não é tão boa para esses casos. 
