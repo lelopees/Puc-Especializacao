@@ -1,0 +1,268 @@
+{
+    "uid": "9d290358-facd-4326-a72a-ccd0abdd8d51",
+    "name": "4_Default_NeuralNetwork",
+    "preprocessing": [
+        {
+            "remove_columns": [
+                "examide",
+                "citoglipton"
+            ],
+            "scale": [
+                {
+                    "scale": [
+                        0.8638643126178428,
+                        16.046039789063375,
+                        1.4484463931131284,
+                        4.402037053569233,
+                        4.056131466297314,
+                        2.9074869409688833,
+                        19.480659984452554,
+                        1.6415994492266255,
+                        6.806300400997274,
+                        1.2780402315665822,
+                        0.012849143957110624,
+                        0.05689434439251868,
+                        0.11568883983528178,
+                        1.9313303129109132,
+                        0.4245677944195481
+                    ],
+                    "mean": [
+                        1.6568644989060286,
+                        65.94797099255548,
+                        2.0119992844463406,
+                        3.1513395990147375,
+                        5.809112300642623,
+                        4.286359070330668,
+                        42.610023255493935,
+                        1.27017654910487,
+                        15.308142175007912,
+                        0.6507685321517525,
+                        0.9998348722323898,
+                        0.9967524872369996,
+                        0.9864320017613628,
+                        7.42252067537257,
+                        0.7640874626742442
+                    ],
+                    "var": [
+                        0.7462615506146981,
+                        257.47539291220505,
+                        2.0979969537224314,
+                        19.37793022099649,
+                        16.452202471887198,
+                        8.453480311904595,
+                        379.49611342985094,
+                        2.69484875170116,
+                        46.325725148615646,
+                        1.6333868335027633,
+                        0.00016510050043055244,
+                        0.0032369664238545218,
+                        0.013383907662433478,
+                        3.7300367775685657,
+                        0.18025781205827968
+                    ],
+                    "n_samples_seen": 72671,
+                    "n_features_in": 15,
+                    "columns": [
+                        "race",
+                        "age",
+                        "admission_type_id",
+                        "discharge_disposition_id",
+                        "admission_source_id",
+                        "time_in_hospital",
+                        "num_lab_procedures",
+                        "num_procedures",
+                        "num_medications",
+                        "number_inpatient",
+                        "diag_1",
+                        "diag_2",
+                        "diag_3",
+                        "number_diagnoses",
+                        "diabetesMed"
+                    ],
+                    "scale_method": "scale_normal"
+                }
+            ],
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "race": [
+                        "scale_normal"
+                    ],
+                    "age": [
+                        "scale_normal"
+                    ],
+                    "admission_type_id": [
+                        "scale_normal"
+                    ],
+                    "discharge_disposition_id": [
+                        "scale_normal"
+                    ],
+                    "admission_source_id": [
+                        "scale_normal"
+                    ],
+                    "time_in_hospital": [
+                        "scale_normal"
+                    ],
+                    "num_lab_procedures": [
+                        "scale_normal"
+                    ],
+                    "num_procedures": [
+                        "scale_normal"
+                    ],
+                    "num_medications": [
+                        "scale_normal"
+                    ],
+                    "number_inpatient": [
+                        "scale_normal"
+                    ],
+                    "diag_1": [
+                        "scale_normal"
+                    ],
+                    "diag_2": [
+                        "scale_normal"
+                    ],
+                    "diag_3": [
+                        "scale_normal"
+                    ],
+                    "number_diagnoses": [
+                        "scale_normal"
+                    ],
+                    "examide": [
+                        "remove_column"
+                    ],
+                    "citoglipton": [
+                        "remove_column"
+                    ],
+                    "diabetesMed": [
+                        "scale_normal"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification"
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.1.2",
+            "algorithm_name": "Neural Network",
+            "algorithm_short_name": "Neural Network",
+            "uid": "d25146d6-0466-4252-9bb1-ad8d76423521",
+            "params": {
+                "model_type": "Neural Network",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "dense_1_size": 32,
+                "dense_2_size": 16,
+                "learning_rate": 0.05,
+                "seed": 4,
+                "explain_level": 2
+            },
+            "name": "learner_fold_0"
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "race": [
+                    "scale_normal"
+                ],
+                "age": [
+                    "scale_normal"
+                ],
+                "admission_type_id": [
+                    "scale_normal"
+                ],
+                "discharge_disposition_id": [
+                    "scale_normal"
+                ],
+                "admission_source_id": [
+                    "scale_normal"
+                ],
+                "time_in_hospital": [
+                    "scale_normal"
+                ],
+                "num_lab_procedures": [
+                    "scale_normal"
+                ],
+                "num_procedures": [
+                    "scale_normal"
+                ],
+                "num_medications": [
+                    "scale_normal"
+                ],
+                "number_inpatient": [
+                    "scale_normal"
+                ],
+                "diag_1": [
+                    "scale_normal"
+                ],
+                "diag_2": [
+                    "scale_normal"
+                ],
+                "diag_3": [
+                    "scale_normal"
+                ],
+                "number_diagnoses": [
+                    "scale_normal"
+                ],
+                "examide": [
+                    "remove_column"
+                ],
+                "citoglipton": [
+                    "remove_column"
+                ],
+                "diabetesMed": [
+                    "scale_normal"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+            "validation_type": "split",
+            "train_ratio": 0.75,
+            "shuffle": true,
+            "stratify": true,
+            "X_path": "AutoML_1\\X.data",
+            "y_path": "AutoML_1\\y.data",
+            "results_path": "AutoML_1"
+        },
+        "learner": {
+            "model_type": "Neural Network",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "dense_1_size": 32,
+            "dense_2_size": 16,
+            "learning_rate": 0.05,
+            "seed": 4,
+            "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "4_Default_NeuralNetwork",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+    },
+    "saved": [
+        "4_Default_NeuralNetwork\\learner_fold_0.neural_network"
+    ],
+    "predictions_fname": "4_Default_NeuralNetwork\\predictions_validation.csv",
+    "metric_name": "logloss",
+    "final_loss": 0.3375739717052472,
+    "train_time": 39.97286772727966,
+    "is_stacked": false,
+    "threshold": 0.22890135635392833
+}

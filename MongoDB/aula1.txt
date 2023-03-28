@@ -1,0 +1,3 @@
+coleções de documentos: doc, xls, csv.
+
+todo documento tem um id

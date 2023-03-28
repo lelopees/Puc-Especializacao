@@ -1,0 +1,16 @@
+if (number_inpatient <= 1.5) and (discharge_disposition_id <= 20.0) and (number_inpatient <= 0.5) then class: 0 (proba: 92.01%) | based on 46,839 samples
+
+if (number_inpatient <= 1.5) and (discharge_disposition_id <= 20.0) and (number_inpatient > 0.5) then class: 0 (proba: 87.1%) | based on 13,956 samples
+
+if (number_inpatient > 1.5) and (number_inpatient <= 4.5) and (discharge_disposition_id <= 20.0) then class: 0 (proba: 81.4%) | based on 9,020 samples
+
+if (number_inpatient > 1.5) and (number_inpatient > 4.5) and (number_inpatient <= 7.5) then class: 0 (proba: 67.35%) | based on 1,179 samples
+
+if (number_inpatient <= 1.5) and (discharge_disposition_id > 20.0) and (number_diagnoses > 8.5) then class: 0 (proba: 78.19%) | based on 697 samples
+
+if (number_inpatient <= 1.5) and (discharge_disposition_id > 20.0) and (number_diagnoses <= 8.5) then class: 0 (proba: 66.19%) | based on 488 samples
+
+if (number_inpatient > 1.5) and (number_inpatient > 4.5) and (number_inpatient > 7.5) then class: 0 (proba: 52.13%) | based on 328 samples
+
+if (number_inpatient > 1.5) and (number_inpatient <= 4.5) and (discharge_disposition_id > 20.0) then class: 0 (proba: 65.85%) | based on 164 samples
+
